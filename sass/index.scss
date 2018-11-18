@@ -1,0 +1,389 @@
+// 头部
+.header {
+    border-bottom: 1px solid #ccc;
+    > .container {
+        height: 50px;
+
+        >.row {
+            height: 100%;
+            line-height: 50px;
+            text-align: center;
+            >div {
+                height: 100%;
+                line-height: 50px;
+                >.wjs_code {
+                    >img {
+                        position: absolute;
+                        display: none;
+                        top: 49px;
+                        left: 50%;
+                        transform: translate(-50%,0);
+                    }
+                    &:hover {
+                        img {
+                            display: block;
+                            z-index: 998;
+                        }
+                    }
+                }
+                &:nth-of-type(-n+3) {
+                    border-right: 1px solid #ccc;
+                        >a {
+                            color: #333;
+                        }
+                }
+                &:nth-last-of-type(1){
+                    >.btn-danger {
+                        background-color: #e92322;
+                    }
+                    >.btn {
+                        padding: 3px 15px;
+                    }
+                    >.btn-link {
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+// 导航部分
+.wjs_nav {
+    margin-bottom: 0;
+    .navbar-brand {
+        height: 80px;
+        line-height: 50px;
+        >span {
+            font-size: 40px;
+            color: #000;
+            
+        }
+        >.wjs_icon_logo {
+            color: #e92322;
+        }
+    }
+    .navbar-nav {
+        >li {
+            height: 80px;
+            line-height: 80px;
+            
+            >a {
+                line-height: 50px;
+                font-size: 16px;
+                padding-bottom: 12px;
+            }
+            > a:hover,a:focus{
+                border-bottom: 3px solid #e92322;
+            }
+            >a,a:hover,a:focus {
+                color: #777;
+                background-color: #f8f8f8;
+            }
+        }
+        >.active{
+            >a,a:hover,a:focus {
+                color: #555;
+                background-color: #f8f8f8;
+                border-bottom: 3px solid #e92322;
+            }
+        }
+    }
+    .navbar-toggle {
+        margin-top: 23px;
+    }
+}
+// 轮播图部分
+.wjs_banner{
+    .mobileImg {
+        width: 100%;
+        // display: block;
+        >img {
+            width: 100%;
+            // display: block;
+          }
+      }
+      .pcImg {
+        width: 100%;
+        height: 410px;
+        display: block;
+        background-size: cover;
+        background-position: center;
+      }
+}
+// 信息栏部分
+.wjs_info{
+    padding: 30px;
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+    .media{
+        &:hover{
+            color:red;
+        }
+    }
+    .media-left{
+        vertical-align: middle;
+    }
+    .wjs_icon {
+        font-size: 25px;
+    }
+}
+// 预约部分
+.wjs_date {
+    
+    .row {
+        height: 60px;
+        line-height: 60px;
+        .wjs_icon {
+            font-size: 18px;
+        }
+        a {
+            color: #333;
+            &:hover {
+                color: red;
+                text-decoration: none;
+            }
+        }
+        .liji {
+            color: red;
+            border-bottom: 1px dashed red;
+        }
+    }
+}
+// 产品介绍部分
+.wjs_product {
+    padding: 15px 0;
+    background-color: #eee;
+    overflow: hidden;
+    // 产品标题
+    .nav-tabs{
+        li {
+            height: 80px;
+            a {
+                color: #333;
+                border:none;
+                line-height: 58px;
+                padding-bottom: 7px;
+                &:hover {
+                    border: 0;
+                }
+            }
+            &.active {
+                a,a:hover,a:focus {
+                    background-color: #eee;
+                    border:0;
+                    border-bottom: 3px solid red;
+                }
+            }
+        }
+    }
+    .tab-content {
+        .row {
+            .pBox {
+                display: flex;
+                height: 150px;
+                margin-top: 15px;
+                background-color: #fff;
+                >.p_left {
+                    position: relative;
+                    flex: 1;
+                    border-right: 1px dashed #ddd;
+                    h3 {
+                        height: 36px;
+                        line-height: 36px;
+                        margin: 0;
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                    >.row {
+                        font-size: 12px;
+                        padding: 0 5px;
+                        >div{
+                            text-align: left;
+                        }
+                        >div:nth-of-type(2n) {
+                            text-align: right;
+                        }
+                    }
+                    
+                }
+                >.p_right {
+                    position: relative;
+                    width: 100px;
+                    padding-top: 20px; 
+                    color: red;
+                    text-align: center;
+                    >.bady {
+                        position: absolute;
+                        left: 50%;
+                        top: 10px;
+                        transform: translate(-50%,0);
+                        width: 100%;
+                        >span {
+                            padding: 1px;
+                            cursor: pointer;
+                        }
+                        > span:nth-of-type(1) {
+                            border: 1px solid red;
+                        }
+                        > span:nth-of-type(2) {
+                            border: 1px solid blue;
+                        }
+                    }
+                    >span {
+                        font-size: 50px;
+                        font-weight: bold;
+                    }
+                    >sub {
+                        bottom: 0;
+                    }
+                    &::before,&:after {
+                        content: '';
+                        position: absolute;
+                        left: -8px;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background-color: #eee;
+                    }
+                    &::before {
+                        top: -8px;
+                    }
+                    &::after {
+                        bottom: -8px;
+                    }
+                    
+                }
+            }
+            .active {
+                position: relative;
+                background-color: red;
+                color: #fff;
+                >.p_right {
+                    color:white;
+                }
+                &::before {
+                    content: "\e915";
+                    font-family: wjs;
+                    position: absolute;
+                    font-size: 30px;
+                    top: -6px;
+                    left: 0;
+                }
+            }
+        }
+        
+        
+    }
+
+
+}
+// 新闻栏开始
+.wjs_news {
+    position: relative;
+    height: 100%;
+    padding: 15px 0;
+    .container {
+        h3 {
+            position: relative;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border: 1px solid #ddd;
+                border-radius: 50%;
+                bottom: -5px;
+                right:-8px
+            }
+        }
+        .wjs_newsLine {
+            position: absolute;
+            left: 45px;
+            width: 1px;
+            height: 100%;
+            background-color: red;
+        }
+        .nav-tabs {
+            border: none;
+            >li {
+                margin-bottom: 60px;
+                >a {
+                    width: 60px;
+                    height: 60px;
+                    padding: 10px 15px;
+                    font-size: 30px;
+                    color: #fff;
+                    background-color: #ccc;
+                    border-radius: 50%;
+                    text-align: center;
+                    
+                }
+                &:nth-last-of-type(1) {
+                    margin-bottom: 0;                 
+                }
+                &.active {
+                    >a,a:hover,a:focus {
+                        background-color: red;
+                        color: #fff;
+                        border:  none
+                    }
+                }
+                
+            }
+            @media screen and (min-width :768px) and (max-width:992px){
+                li {
+                    margin: 30px;
+                    padding:0 0 0 15px;
+                }
+            }
+            @media screen and (max-width:768px) {
+                li{
+                  margin: 30px 0;  
+                  width: 25%;
+                  padding: 0 0 0 65px;
+                }
+            }
+        } 
+        .tab-content {
+            ul {
+                list-style: none;
+                li {
+                    padding: 12px;
+                    a {
+                        font-size: 16px;
+                        color: #e92322;
+                    }
+                }
+            }
+        }
+    }
+}
+// 合作伙伴样式
+.wjs_partener{
+    padding: 20px;
+    text-align: center;
+    h3{
+        line-height: 50px;
+    }
+    ul {
+        list-style: none;
+        display: inline-block;
+         > li {
+             float: left;
+             margin-left: 20px;
+             .wjs_icon{
+                 font-size: 80px;
+             }
+             a {
+             color: #000;
+
+             }
+         }
+    }
+}
